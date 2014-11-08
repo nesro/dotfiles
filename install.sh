@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 backup_and_link()
 {
