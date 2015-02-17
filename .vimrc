@@ -1,7 +1,3 @@
-set background=dark
-
-inoremap jk <ESC>
-nnoremap ; :
 
 "-- VUNDLE ---------------------------------------------------------------------
 set nocompatible
@@ -13,11 +9,11 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
+
 filetype plugin indent on
 
 "-------------------------------------------------------------------------------
@@ -30,6 +26,11 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:_
 
 "-------------------------------------------------------------------------------
+
+set background=dark
+
+inoremap jk <ESC>
+nnoremap ; :
 
 set exrc
 set secure
@@ -69,4 +70,3 @@ highlight ColorColumn ctermbg=darkred ctermfg=white guibg=white
 highlight OverLength ctermbg=darkred ctermfg=white guibg=white
 match OverLength /\%81v.\+/
 
-" end of file
