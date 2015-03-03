@@ -7,8 +7,8 @@ bindkey "^J" prev # ctrl+j: previous window
 bindkey "^K" next # ctrl+k: next window
 bindkey "^L" next # ctrl+l: next window
 bindkey "^N" screen # ctrl+n: new window, kill window with ctrl+d
-bindkey "^P" windowlist # ctrl+l: list windows, choose with j/k and enter
-bindkey "^M" copy # ctrl+m: enter copy mode, escape with ctrl+c
+bindkey "^U" windowlist # ctrl+l: list windows, choose with j/k and enter
+bindkey "^I" copy # ctrl+m: enter copy mode, escape with ctrl+c
 
 defscrollback 5000 # remember 5000 lines
 compacthist on # suppres whitespace
