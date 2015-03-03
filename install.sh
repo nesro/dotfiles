@@ -9,8 +9,13 @@ backup_and_link()
 		mv ~/$file{,_backup_$(date +"%y_%m_%d")}
 	fi
 
-	ln -s $(readlink -f $file) ~/$file
+	if ln -s $(readlink -f $file) ~/$file; then
+		echo "$file: OK"
+	else
+		echo "$file: FAIL"
+	fi
 }
 
 backup_and_link ".vimrc"
+backup_and_link ".screenrc"
 

@@ -1,5 +1,10 @@
+" nesro's .vimrc
+" https://github.com/nesro/dotfiles
+" warning: this is very, very bad .vimrc and I'm not happy with it at all
 
 "-- VUNDLE ---------------------------------------------------------------------
+" https://github.com/gmarik/Vundle.vim
+"
 set nocompatible
 filetype off
 
@@ -7,10 +12,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" install plugins:
+" vim +PluginInstall +qall
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'amdt/vim-niji' " rainbow parentheses
 
 call vundle#end()
 
@@ -27,10 +37,15 @@ set listchars=tab:▸\ ,eol:¬,trail:_
 
 "-------------------------------------------------------------------------------
 
-set background=dark
+set background=dark " must have, if your terminal is white on black
 
+" the fastest way how to run commands
 inoremap jk <ESC>
 nnoremap ; :
+
+"-------------------------------------------------------------------------------
+
+map <C-n> :NERDTreeToggle<CR>
 
 set exrc
 set secure
