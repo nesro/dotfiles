@@ -1,0 +1,27 @@
+# nesro's minimal .screenrc
+# https://github.com/nesro/dotfiles
+# I use five commands ONLY, thus I don't use ctrl+a or other finger cracking
+# shortcuts
+
+bindkey "^J" prev # ctrl+j: previous window
+bindkey "^K" next # ctrl+k: next window
+bindkey "^N" screen # ctrl+n: new window, kill window with ctrl+d
+bindkey "^L" windowlist # ctrl+l: list windows, choose with j/k and enter
+bindkey "^H" copy # ctrl+h: enter copy mode, escape with ctrl+c
+
+defscrollback 5000 # remember 5000 lines
+compacthist on # suppres whitespace
+
+# no messages please
+startup_message off
+vbell off
+bell_msg ""
+
+altscreen on # redisplay after exiting vim
+
+termcapinfo * ti@:te@ # better scrolling
+
+# I googled this somewhere
+caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
+hardstatus string "%{= g} %{= w}%-Lw%{=r}%n%f* %t%{-}%+LW"
+
