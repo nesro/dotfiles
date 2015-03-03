@@ -18,4 +18,5 @@ backup_and_link()
 
 backup_and_link ".vimrc"
 backup_and_link ".screenrc"
+backup_and_link ".xmodmap"
 
