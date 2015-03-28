@@ -16,6 +16,7 @@ call vundle#begin()
 " vim +PluginInstall +qall
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ctags.vim'
@@ -26,6 +27,8 @@ call vundle#end()
 
 filetype plugin indent on
 
+"- ECLIM -----------------------------------------------------------------------
+let g:EclimCompletionMethod = 'omnifunc'
 "-------------------------------------------------------------------------------
 
 set backupdir=~/.vim/backup//
@@ -45,10 +48,13 @@ nnoremap ; :
 
 "-------------------------------------------------------------------------------
 
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
 
 set exrc
 set secure
+
+"- YCM
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 
 let g:syntastic_c_check_header = 1
 let g:syntastic_c_compiler_options = '-Wall -pedantic -std=c99'
