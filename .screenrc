@@ -24,5 +24,6 @@ termcapinfo * ti@:te@ # better scrolling
 
 # I googled this somewhere
 caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
-hardstatus string "%{= g} %{= w}%-Lw%{=r}%n%f* %t%{-}%+LW"
+#hardstatus string "%{= g} %{= w}%-Lw%{=r}%n%f* %t%{-}%+LW"
+hardstatus string "%H"
 
