@@ -16,6 +16,7 @@ backup_and_link()
 	fi
 }
 
+backup_and_link ".gitignore"
 backup_and_link ".vimrc"
 backup_and_link ".screenrc"
 backup_and_link ".xmodmap"
